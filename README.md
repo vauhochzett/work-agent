@@ -1,4 +1,4 @@
-# work-agent
+# `@work` – your time tracking agent
 
 An [OpenCode](https://opencode.ai) agent and skill for interactive time tracking with the
 [`work`](https://vauhoch.zett.cc/work/) command-line tool.
