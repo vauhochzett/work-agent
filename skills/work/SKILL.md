@@ -38,7 +38,11 @@ Not in the help:
   last record.
 - When the user means the current time ("now", "just started", "I'm done"), pass
   the keyword `now`, never the clock time. Otherwise use their exact times.
-- Run `date` only to resolve days and weekdays, not to fill in `now`.
+- Pass relative days to `work` as names (`--day today`, `--day yesterday`,
+  `--day mon`) or omit `--day` for today; never turn them into dates yourself.
+  Weekday names select from the past seven days, excluding today.
+- The date you were given may be days old. If you need an explicit date (other
+  days, future days, weekday ↔ date), run `date` first. Never use `date` to fill in `now`.
 - Filter patterns match the whole field, so use `'*review*'` for "contains".
   Always single-quote patterns.
 
@@ -106,4 +110,3 @@ answer via a pipe.
 - On errors, explain the message or propose a fix; don't retry blindly.
 - Never edit the log files directly.
 - Reply briefly, e.g. with `work status --oneline` after changes.
-- Conversations can span multiple days. Get context for time-based questions with `date`.
